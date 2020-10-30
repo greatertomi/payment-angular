@@ -1,0 +1,14 @@
+<flutterwave-make-payment
+  [public_key]="publicKey"
+  amount='10'
+  currency='NGN'
+  payment_options="card"
+  redirect_url="as"
+  text="Pay Now"
+  [customer]="customerDetails"
+  [customizations]="customizations"
+  [meta]="meta"
+  [tx_ref]="generateReference()"
+  (callback)="makePaymentCallback($event)"
+  (close)="closedPaymentModal()" >
+</flutterwave-make-payment>
