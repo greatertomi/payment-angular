@@ -1,0 +1,14 @@
+<angular4-paystack
+  [email]="email"
+  [amount]="amount"
+  [ref]="reference"
+  [channels]="['bank','card']"
+  [class]="'btn btn-primary'"
+  (close)="paymentCancel()"
+  (callback)="paymentDone($event)"
+>
+  Pay with Paystack
+</angular4-paystack>
+
+<button #myBtn class="btn btn-secondary payBtn" (click)="buttonClicked()">Clicker</button>
+<button class="btn btn-secondary" (click)="generateRefNumber()">Generate</button>
